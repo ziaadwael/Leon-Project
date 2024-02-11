@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html,body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #DDD;
+}
+
+/* Start Header */
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 200px;
+    background-color: #fff;
+}
+
+header .logo img {
+    width: 80px;
+}
+
+header .links {
+    position: relative;
+}
+
+header .links i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header .links:hover ul {
+    display: block;
+}
+
+header .links ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 20px);
+    background-color: #f6f6f6;
+    min-width: 200px;
+    display: none;
+}
+
+header .links ul::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #9f9292 transparent;
+}
+
+header .links ul li{
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+header .links ul li a {
+    font-family: 'Work Sans',sans-serif;
+    text-decoration: none;
+    color: #333;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+header .links ul li a:hover {
+    padding-left: 15px;
+}
+/* End Header */
+
+/* Start Hero Section */
+
+section.Hero {
+    width: 100%;
+    min-height: 94.3%;
+    background: url('../images/landing.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.Hero main h1.title {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 50px;
+    color: var(--main-color);
+    line-height: 90px;
+}
+
+section.Hero main p.title-description {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 19px;
+    line-height: 34.2px;
+}
+
+/* End Hero Section */
+
+/* Start Feature Section */
+
+section.features {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 50%;
+    padding-right: 50%;
+}
+
+section.features .box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.features .box .img i {
+    font-size: 55px;
+    color: var(--main-color);
+    margin-bottom: 15%;
+}
+
+section.features .box .title h3 {
+    font-family: 'Work Sans',sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+section.features .box .description {
+    width: 400px;
+    text-align: center;
+}
+
+section.features .box .description p {
+    font-family: 'Work Sans',sans-serif;
+    font-size: 17px;
+    line-height: 30.6px;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* End Feature Section */
+
+/* Responsive */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 991.98px) {
+    header{
+        justify-content: space-between;
+        padding: 15px 40px;
+    }
+    section.Hero {
+        background-size: 100% 100%;
+    }
+    section.features {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    section.features .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 50px;
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
